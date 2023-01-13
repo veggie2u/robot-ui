@@ -1,0 +1,529 @@
+@charset "UTF-8";
+.bevel {
+    box-shadow: inset 0.125em 0.125em 0.125em rgba(255, 255, 255, 0.4),
+        inset -0.125em -0.125em 0.125em rgba(0, 0, 0, 0.4);
+    border: 0.0625em solid #ccc;
+}
+
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(45deg, rgba(109, 101, 44, 0.5), rgba(255, 255, 0, 0));
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+} */
+
+.PS4-dualshock {
+    width: 700px;
+    height: 500px;
+    position: relative;
+    color: white;
+    font-size: 13.3333333333px;
+    font-family: Arial;
+    font-weight: bold;
+    filter: drop-shadow(0px 0px 2em rgba(0, 0, 0, 0.3));
+}
+.PS4-dualshock .inner {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: #2d2828;
+    border-radius: 50%/15%;
+}
+.PS4-dualshock .inner .top-buttons {
+    width: 75%;
+    height: 20%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 21%;
+}
+.PS4-dualshock .inner .top-buttons::before {
+    position: absolute;
+    top: -80%;
+    left: 46%;
+    height: 100%;
+    width: 4%;
+    background-color: black;
+    background: linear-gradient(90deg, #676462 10%, #908882 30%, black 100%);
+    border: 0.0625em solid #bdb7b3;
+    box-sizing: border-box;
+    border-top: 0px solid;
+}
+.PS4-dualshock .inner .top-buttons .left,
+.PS4-dualshock .inner .top-buttons .right {
+    height: 100%;
+    width: 20%;
+    background-color: #2d2828;
+    border-radius: 50%/15%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -1%;
+    box-sizing: border-box;
+    color: #949494;
+    box-shadow: 0 -2px 0px 2px #121010;
+}
+.PS4-dualshock .inner .top-buttons .left:hover,
+.PS4-dualshock .inner .top-buttons .right:hover {
+    box-shadow: inset 0 0 0.8em rgba(255, 0, 0, 0.4);
+}
+.PS4-dualshock .inner .top-buttons .left:active,
+.PS4-dualshock .inner .top-buttons .right:active {
+    transform: translateY(6px);
+}
+.PS4-dualshock .inner .top-buttons .left::before,
+.PS4-dualshock .inner .top-buttons .right::before {
+    content: '';
+    background: radial-gradient(ellipse at 0% 0%, transparent 75%, #adadad 75%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 20%;
+    width: 15%;
+    transform: translate(165%, 60%) rotate(90deg);
+}
+.PS4-dualshock .inner .top-buttons .right {
+    left: unset;
+    right: -2%;
+    padding: 0.1875em 0 0 1.5625em;
+}
+.PS4-dualshock .inner .top-buttons .right::before {
+    transform: translate(-164%, 60%) rotate(90deg);
+    background: radial-gradient(ellipse at 0% 100%, transparent 75%, #adadad 75%);
+    left: 0;
+}
+.PS4-dualshock .inner .body {
+    position: absolute;
+    top: 27%;
+    height: 215px;
+    width: 560px;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 2;
+    background-color: #adadad;
+}
+.PS4-dualshock .inner .body .share-btn,
+.PS4-dualshock .inner .body .options-btn {
+    position: absolute;
+    top: 7%;
+    left: 25%;
+    height: 15%;
+    width: 3%;
+    z-index: 10;
+    background-color: #474747;
+    border-radius: 50%/25%;
+    box-shadow: inset 0 0.0625em 0.0625em 0em rgba(255, 255, 255, 0.3),
+        inset 0 -0.0625em 0.0625em 0em rgba(0, 0, 0, 0.5), 0 0 0 0.0625em rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.7);
+}
+.PS4-dualshock .inner .body .share-btn:hover,
+.PS4-dualshock .inner .body .options-btn:hover {
+    box-shadow: inset 0 0 0.8em rgba(255, 0, 0, 0.4);
+}
+.PS4-dualshock .inner .body .share-btn:active,
+.PS4-dualshock .inner .body .options-btn:active {
+    box-shadow: inset 0 0.0625em 0.0625em 0em rgba(255, 255, 255, 0.6);
+}
+.PS4-dualshock .inner .body .share-btn::before,
+.PS4-dualshock .inner .body .options-btn::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -130%) rotateX(30deg);
+    transform-origin: bottom center;
+    content: 'SHARE';
+    font-size: 0.625em;
+    font-weight: normal;
+}
+.PS4-dualshock .inner .body .options-btn {
+    right: 25%;
+    left: unset;
+}
+.PS4-dualshock .inner .body .options-btn::before {
+    content: 'OPTIONS';
+}
+.PS4-dualshock .inner .body .screen {
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translatex(-50%);
+    background-color: #0e1116;
+    border-radius: 0 0 5% 5%/0 0 12% 12%;
+    height: 45%;
+    width: 40%;
+    border: 0.25em solid black;
+    box-sizing: border-box;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.3) 20%, transparent 20%);
+    background-size: 3.5% 5%;
+    box-shadow: 0 0.0625em 0.0625em 0 rgba(255, 255, 255, 0.4);
+}
+.PS4-dualshock .inner .body .screen::before {
+    width: 100%;
+    height: 20%;
+    border-radius: 5% 5% 0 0/40% 40% 0 0;
+    background: linear-gradient(to bottom, #4a4b50 0%, #7c7c7c 52%, #7c7c7c 60%, #4a4b50 100%);
+    position: absolute;
+    top: 0;
+    left: -0.25em;
+    transform: translateY(-100%);
+    content: '';
+    border-right: 0.25em solid black;
+    border-left: 0.25em solid black;
+}
+.PS4-dualshock .inner .body .screen::after {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        rgba(255, 255, 255, 0.1) 40%,
+        rgba(255, 255, 255, 0.1) 41%,
+        rgba(255, 255, 255, 0.2) 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    border-radius: 0 0 5% 5%/0 0 12% 12%;
+}
+.PS4-dualshock .inner .body .arrows {
+    width: 29.9464285714%;
+    height: 78%;
+    background: linear-gradient(0, #a0a0a0, #949494);
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    left: -3%;
+    z-index: 10;
+}
+.PS4-dualshock .inner .body .arrows span {
+    position: absolute;
+    display: block;
+    height: 27%;
+    width: 27%;
+    background-color: #47484d;
+    border-radius: 30% 30% 30% 30%/25% 25% 45% 45%;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, 10%);
+    border: 0.1875em solid black;
+    border-bottom: 0 solid transparent;
+    box-sizing: border-box;
+    box-shadow: inset 0 -0.0625em 0.3125em 0.0625em rgba(255, 255, 255, 0.3);
+}
+.PS4-dualshock .inner .body .arrows span:hover {
+    box-shadow: inset 0 0 0.8em rgba(255, 0, 0, 0.4);
+}
+.PS4-dualshock .inner .body .arrows span:active {
+    box-shadow: inset 0 0 0.1875em 0.0625em rgba(255, 255, 255, 0.6);
+    border: 0;
+}
+.PS4-dualshock .inner .body .arrows span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background: radial-gradient(ellipse at 100% 100%, #53545a 50%, transparent 50%);
+    height: 68%;
+    width: 68%;
+    transform: translate(-50%, 28%) rotate(45deg);
+    border-radius: 0 0 26% 0;
+    border-right: 0.1875em solid black;
+    border-bottom: 0.1875em solid black;
+    box-sizing: border-box;
+}
+.PS4-dualshock .inner .body .arrows span::before {
+    content: '⯅';
+    position: absolute;
+    top: 0;
+    font-size: 1.5em;
+    left: 50%;
+    transform: translate(-50%, -90%) scaleX(1.7);
+    color: #bababa;
+}
+.PS4-dualshock .inner .body .arrows span:nth-child(2) {
+    transform-origin: bottom center;
+    transform: rotate(90deg) translate(50%, 10%);
+}
+.PS4-dualshock .inner .body .arrows span:nth-child(3) {
+    transform-origin: bottom center;
+    transform: rotate(180deg) translate(50%, -90%);
+}
+.PS4-dualshock .inner .body .arrows span:nth-child(4) {
+    transform-origin: bottom center;
+    transform: rotate(270deg) translate(-50%, -90%);
+}
+.PS4-dualshock .inner .body .left-joystick {
+    width: 21.1160714286%;
+    height: 55%;
+    background: linear-gradient(0, #a0a0a0, #949494);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -15%;
+    left: 20%;
+    z-index: 9;
+    box-shadow: 0.125em 0.125em 0 0.3125em #949494, inset 0 -0.0625em 0.1875em 0.1875em rgba(255, 255, 255, 0.2);
+}
+.PS4-dualshock .inner .body .left-joystick .inner-joystick {
+    height: 70%;
+    width: 70%;
+    position: absolute;
+    left: 15%;
+    top: 15%;
+    border-radius: 50%;
+    background-color: #3e3f44;
+    border: 2px solid black;
+    box-sizing: border-box;
+    background-image: url(https://www.transparenttextures.com/patterns/otis-redding.png);
+    box-shadow: inset 0 0.125em 0.1875em 0.0625em rgba(255, 255, 255, 0.3),
+        inset 0 -0.125em 0.1875em 0.0625em rgba(0, 0, 0, 0.5);
+}
+.PS4-dualshock .inner .body .left-joystick .inner-joystick::before {
+    content: '';
+    position: absolute;
+    width: 64%;
+    height: 64%;
+    left: 18%;
+    top: 18%;
+    border-radius: 50%;
+    box-shadow: 0 0.125em 0.1875em 0.0625em rgba(255, 255, 255, 0.3), 0 -0.125em 0.1875em 0.0625em rgba(0, 0, 0, 0.5);
+}
+.PS4-dualshock .inner .body .buttons {
+    width: 29.9464285714%;
+    height: 78%;
+    background: linear-gradient(0, #a0a0a0, #949494);
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    right: -3%;
+    z-index: 10;
+}
+.PS4-dualshock .inner .body .buttons span {
+    position: absolute;
+    display: block;
+    height: 30%;
+    width: 30%;
+    background: linear-gradient(0deg, #3e373d, #494a4f);
+    border-radius: 50%;
+    left: 50%;
+    top: 3%;
+    transform: translateX(-50%);
+    border: 0.1625em solid black;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0.1875em 0.0625em rgba(255, 255, 255, 0.3);
+}
+.PS4-dualshock .inner .body .buttons span:hover {
+    box-shadow: inset 0 0 0.8em rgba(255, 0, 0, 0.4);
+}
+.PS4-dualshock .inner .body .buttons span:active {
+    box-shadow: inset 0 0 0.1875em 0.0625em rgba(255, 255, 255, 0.6);
+    border: 0;
+}
+.PS4-dualshock .inner .body .buttons span.triangle::after,
+.PS4-dualshock .inner .body .buttons span.triangle::before {
+    content: '';
+    height: 50%;
+    width: 70%;
+    border-bottom: 0.125em solid #3ddbde;
+    top: 25%;
+    left: 15%;
+    position: absolute;
+    box-sizing: border-box;
+}
+.PS4-dualshock .inner .body .buttons span.triangle::after {
+    left: 15%;
+    height: 70%;
+    width: 70%;
+    top: 37%;
+    border-top: 0.125em solid #3ddbde;
+    border-right: 0.125em solid #3ddbde;
+    border-bottom: unset;
+    transform: rotate(-45deg) skew(-15deg, -15deg);
+}
+.PS4-dualshock .inner .body .buttons span.circle {
+    top: 50%;
+    left: 97%;
+    transform: translate(-100%, -50%);
+}
+.PS4-dualshock .inner .body .buttons span.circle::before {
+    border: 0.125em solid #ff8288;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    border-radius: 50%;
+    width: 70%;
+    height: 70%;
+    content: '';
+    box-sizing: border-box;
+}
+.PS4-dualshock .inner .body .buttons span.x {
+    top: 97%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+.PS4-dualshock .inner .body .buttons span.x::after,
+.PS4-dualshock .inner .body .buttons span.x::before {
+    content: '';
+    height: 70%;
+    width: 5%;
+    background-color: #8eb4e1;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    position: absolute;
+}
+.PS4-dualshock .inner .body .buttons span.x::after {
+    transform: translateX(-50%) rotate(-45deg);
+}
+.PS4-dualshock .inner .body .buttons span.square {
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+}
+.PS4-dualshock .inner .body .buttons span.square::after {
+    content: '';
+    height: 60%;
+    width: 60%;
+    border: 0.125em solid #ddacdb;
+    top: 20%;
+    left: 20%;
+    position: absolute;
+    box-sizing: border-box;
+}
+.PS4-dualshock .inner .body .right-joystick {
+    width: 21.1160714286%;
+    height: 55%;
+    background: linear-gradient(0, #a0a0a0, #949494);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -15%;
+    right: 20%;
+    z-index: 9;
+    box-shadow: 0.125em 0.125em 0 0.3125em #949494, inset 0 -0.0625em 0.1875em 0.1875em rgba(255, 255, 255, 0.2);
+}
+.PS4-dualshock .inner .body .right-joystick .inner-joystick {
+    height: 70%;
+    width: 70%;
+    position: absolute;
+    left: 15%;
+    top: 15%;
+    border-radius: 50%;
+    background-color: #3e3f44;
+    border: 2px solid black;
+    box-sizing: border-box;
+    background-image: url(https://www.transparenttextures.com/patterns/otis-redding.png);
+    box-shadow: inset 0 0.125em 0.1875em 0.0625em rgba(255, 255, 255, 0.3),
+        inset 0 -0.125em 0.1875em 0.0625em rgba(0, 0, 0, 0.5);
+}
+.PS4-dualshock .inner .body .right-joystick .inner-joystick::before {
+    content: '';
+    position: absolute;
+    width: 64%;
+    height: 64%;
+    left: 18%;
+    top: 18%;
+    border-radius: 50%;
+    box-shadow: 0 0.125em 0.1875em 0.0625em rgba(255, 255, 255, 0.3), 0 -0.125em 0.1875em 0.0625em rgba(0, 0, 0, 0.5);
+}
+.PS4-dualshock .inner .body .logo {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-50%);
+    height: 18%;
+    width: 7%;
+    border-radius: 50%;
+    background-color: #262626;
+    box-shadow: 0 0 0.0625em 0.125em black, inset 0px -0.625em 0.625em 0px rgba(255, 255, 255, 0.3);
+}
+.PS4-dualshock .inner .body .logo svg:hover {
+    box-shadow: 0 0 0.8em rgba(255, 0, 0, 0.4);
+}
+.PS4-dualshock .inner .body .logo:active {
+    box-shadow: inset 0 0 0.1875em 0.0625em rgba(255, 255, 255, 0.6);
+}
+.PS4-dualshock .inner .body .logo svg {
+    max-height: 70%;
+    max-width: 70%;
+    left: 15%;
+    top: 15%;
+    position: absolute;
+    fill: rgba(255, 255, 255, 0.7);
+}
+.PS4-dualshock .inner .body .speaker {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: bottom center;
+    height: 15%;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+}
+.PS4-dualshock .inner .body .speaker div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.PS4-dualshock .inner .body .speaker i {
+    height: 0.4375em;
+    width: 0.4375em;
+    background-color: black;
+    border-radius: 50%;
+    display: block;
+    margin: 0.125em 0.1875em;
+    box-shadow: -0.0625em 0.0625em 0.0625em rgba(255, 255, 255, 0.2);
+}
+.PS4-dualshock .inner .handles {
+    height: 180%;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: -5%;
+    transform: translate(-50%);
+    z-index: 1;
+}
+.PS4-dualshock .inner .handles span {
+    background-color: #adadad;
+    position: absolute;
+    right: -5%;
+    top: 0%;
+    border-radius: 5% 33% 100% 100%/5% 90% 100% 100%;
+    transform-origin: top left;
+    transform: skew(7deg);
+    height: 100%;
+    width: 27%;
+    content: '';
+    transform-origin: top left;
+    z-index: 0;
+    overflow: hidden;
+    box-shadow: inset -0.625em -0.125em 0.625em 0 #949494;
+}
+.PS4-dualshock .inner .handles span::before {
+    position: absolute;
+    bottom: 17%;
+    left: 0;
+    height: 30%;
+    width: 100%;
+    content: '';
+    box-shadow: 1.25em 6.875em 0 1.875em #7a7a7a;
+    border-radius: 50%/35%;
+    transform: skew(-25deg);
+}
+.PS4-dualshock .inner .handles span:nth-child(1) {
+    left: -4%;
+    border-radius: 33% 5% 100% 100%/90% 5% 100% 100%;
+    transform-origin: top right;
+    transform: skew(-7deg);
+    box-shadow: inset 0.625em -0.125em 0.625em 0 #949494;
+}
+.PS4-dualshock .inner .handles span:nth-child(1)::before {
+    transform: skew(25deg);
+    box-shadow: -1.25em 6.875em 0 1.875em #7a7a7a;
+}
