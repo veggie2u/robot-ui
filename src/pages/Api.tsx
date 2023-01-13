@@ -43,10 +43,14 @@ const Api: Component = () => {
     }
 
     createEffect(async () => {
+        console.log('Connecting to backend')
         await client.connect()
+        console.log('Subscribe to /item/5')
         client.subscribe('/item/5', handleWords)
+        console.log('Request start')
         const payload = await client.request('start')
         setMessage(payload.payload)
+        console.log('Ready')
     })
 
     return (
